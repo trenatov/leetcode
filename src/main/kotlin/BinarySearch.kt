@@ -8,7 +8,7 @@ class BinarySearch : Problem {
     private fun search(nums: IntArray, first: Int, last: Int, target: Int): Int {
         if (last >= first) {
             val mid: Int = first + (last - first) / 2
-            if (nums[mid] === target) {
+            if (nums[mid] == target) {
                 return mid
             }
             return if (nums[mid] > target) {
