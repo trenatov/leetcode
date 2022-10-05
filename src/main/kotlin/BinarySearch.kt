@@ -3,18 +3,29 @@
  */
 class BinarySearch : Problem {
 
-    fun search(nums: IntArray, target: Int, mid: Int = nums.size): Int {
-        val currentMid = mid / 2
+    fun binarySearch(nums: IntArray, target: Int): Int = search(nums, 0, nums.size - 1, target)
 
-
-
+    private fun search(nums: IntArray, first: Int, last: Int, target: Int): Int {
+        if (last >= first) {
+            val mid: Int = first + (last - first) / 2
+            if (nums[mid] === target) {
+                return mid
+            }
+            return if (nums[mid] > target) {
+                search(nums, first, mid - 1, target)
+            } else {
+                search(nums, mid + 1, last, target)
+            }
+        }
         return -1
     }
 
     override fun run() {
-        val array = intArrayOf(-1, 0, 3, 5, 9, 12)
+        val array1 = intArrayOf(-1, 0, 3, 5, 9, 12)
+        val array2 = intArrayOf(-1, 0, 3, 5, 9, 12)
 
-        println(search(array, 9))
+        println(binarySearch(array1, 9))
+        println(binarySearch(array2, 2))
     }
 
 }
