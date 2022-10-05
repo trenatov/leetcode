@@ -1,0 +1,5 @@
+interface Problem {
+
+    fun run()
+
+}
