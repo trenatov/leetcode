@@ -1,11 +1,9 @@
-package binary
-
 import Problem
 
 /**
- * https://leetcode.com/problems/search-insert-position/?envType=study-plan&id=algorithm-i
+ * https://leetcode.com/problems/binary-search/?envType=study-plan&id=algorithm-i
  */
-class SearchInsertPosition : Problem {
+class BinarySearch : Problem {
 
     fun binarySearch(nums: IntArray, target: Int): Int = search(nums, 0, nums.size - 1, target)
 
