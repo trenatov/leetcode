@@ -4,17 +4,17 @@
 class BuySellStocks : Problem {
 
     fun maxProfit(prices: IntArray): Int {
-        var max = 0
+        var profit = 0
         var min = prices[0]
 
         for (i in 1 until prices.size) {
             if (prices[i] < min) {
                 min = prices[i]
-            } else if (prices[i] - min > max) {
-                max = prices[i] - min
+            } else if (prices[i] - min > profit) {
+                profit = prices[i] - min
             }
         }
-        return max
+        return profit
     }
 
     override fun run() {
