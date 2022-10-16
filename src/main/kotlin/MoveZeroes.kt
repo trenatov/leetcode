@@ -4,17 +4,16 @@
 class MoveZeroes : Problem {
 
     fun moveZeroes(nums: IntArray): Unit {
-        for (index in nums.indices) {
-
-            if (areOtherZeroes(nums, index)) break
-
-            val element = nums[index]
-            if (element == 0) {
-                moveToTheEnd(nums, index)
+        var snowBallSize = 0
+        for (i in nums.indices) {
+            if (nums[i] == 0) {
+                snowBallSize++
+            } else if (snowBallSize > 0) {
+                val t = nums[i]
+                nums[i] = 0
+                nums[i - snowBallSize] = t
             }
         }
-
-        sortElements(nums)
     }
 
     private fun areOtherZeroes(nums: IntArray, index: Int): Boolean {
