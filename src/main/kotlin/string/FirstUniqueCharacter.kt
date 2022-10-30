@@ -1,3 +1,7 @@
+package string
+
+import Problem
+
 /**
  * https://leetcode.com/problems/first-unique-character-in-a-string/
  */
