@@ -1,3 +1,7 @@
+package array
+
+import Problem
+
 /**
  * https://leetcode.com/problems/number-of-good-pairs/
  */
