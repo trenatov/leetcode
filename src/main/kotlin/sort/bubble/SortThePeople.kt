@@ -1,4 +1,4 @@
-package sort
+package sort.bubble
 
 import Problem
 
